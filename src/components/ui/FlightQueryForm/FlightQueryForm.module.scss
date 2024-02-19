@@ -1,0 +1,17 @@
+.root {
+  position: relative;
+  display: flex;
+  background-color: rgb(96 105 119 / 60%);
+  width: fit-content;
+  padding: 1.5rem;
+  gap: 0.5rem;
+
+  .submitButton {
+    background-color: var(--input-bg-red);
+    border: unset;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

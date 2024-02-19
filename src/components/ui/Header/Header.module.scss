@@ -1,0 +1,51 @@
+.root {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 0 2rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    right: 2rem;
+    height: 1px;
+  }
+  &.dark {
+    color: #fff;
+    background-color: #063048;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  &.light {
+    color: #000;
+    &::after {
+      background-color: #000;
+    }
+  }
+
+  .brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0;
+    font-weight: 700;
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}

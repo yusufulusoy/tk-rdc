@@ -1,0 +1,40 @@
+.fares {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  gap: 1rem;
+}
+
+.fare {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+  gap: 0.25rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .radio {
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  .amount {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .amountText {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #647281;
+  }
+  .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}

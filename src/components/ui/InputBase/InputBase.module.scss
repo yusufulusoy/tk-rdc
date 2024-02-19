@@ -1,0 +1,12 @@
+.root {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  border: 0;
+  outline: none;
+
+  &::placeholder {
+    color: #647281;
+    font-weight: 700;
+  }
+}

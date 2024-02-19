@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--input-bg-dark);
+  height: var(--input-height);
+  padding: 0 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .placeholder {
+    color: #fff;
+    font-weight: 700;
+  }
+}

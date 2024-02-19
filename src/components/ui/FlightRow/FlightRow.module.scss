@@ -1,0 +1,65 @@
+.row {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f5f8;
+  margin-bottom: 1rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .price {
+      font-size: 1.5rem;
+    }
+  }
+
+  .body {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    height: 100%;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .button {
+    background-color: var(--input-bg-red);
+    border: 0;
+    color: #fff;
+    padding: 1rem;
+    font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}

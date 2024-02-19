@@ -1,0 +1,58 @@
+.info {
+  display: flex;
+  background-color: #fff;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+
+  .airline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 100px);
+      height: 1px;
+      background-color: #878787;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: -1px;
+    }
+
+    .arrival,
+    .departure {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .departure {
+      text-align: right;
+    }
+
+    .time,
+    .airportCode {
+      font-weight: 700;
+    }
+    .airportCode,
+    .city {
+      color: #647281;
+    }
+    .city {
+      font-size: 0.8rem;
+    }
+  }
+
+  .duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+}

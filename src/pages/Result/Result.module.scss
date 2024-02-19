@@ -1,0 +1,52 @@
+.container {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  border-bottom: 1px solid #000;
+}
+
+.errorIcon {
+  background-color: #ff0000;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.successIcon {
+  background-color: #09ff00;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0026ff;
+}

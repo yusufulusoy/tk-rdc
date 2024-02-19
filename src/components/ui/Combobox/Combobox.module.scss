@@ -1,0 +1,30 @@
+.inputWrapper {
+  display: flex;
+  background-color: #fff;
+  height: var(--input-height);
+
+  .leftSection {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+}
+
+.options {
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 12px 24px #00000024;
+  min-width: 300px;
+
+  .option {
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3685e7;
+    }
+  }
+}
