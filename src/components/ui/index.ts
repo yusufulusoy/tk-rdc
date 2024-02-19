@@ -7,5 +7,6 @@ export * from "./FlightCard";
 export * from "./FlightQueryForm";
 export * from "./Header";
 export * from "./InputBase";
+export * from "./Loading";
 export * from "./Modal";
 export * from './Switch'

@@ -2,12 +2,12 @@ import { IconCheck, IconX } from "@tabler/icons-react";
 import { Layout } from "@/components/layouts";
 import { useLocalStorage } from "@/hooks";
 import styles from "./Result.module.scss";
+import { STATUS } from "@/constants";
 
 export default function ResultPage() {
   const [result, setResult] = useLocalStorage<string>("selectedCategory", "{}");
   const selectedResult = JSON.parse(result);
-  const hasFailed = selectedResult.status === "ERROR";
-  console.log(selectedResult);
+  const hasFailed = selectedResult.status === STATUS.ERROR;
 
   return (
     <Layout>

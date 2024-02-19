@@ -2,7 +2,7 @@ import { Layout } from "@/components/layouts";
 import { useFlightListQuery, useSort } from "@/hooks";
 import styles from "./Flights.module.scss";
 import { AvailableFlights, Switch } from "@/components/ui";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function FlightsPage() {
   const [hasPromotionCode, setHasPromotionCode] = useState<boolean>(false);
@@ -57,13 +57,17 @@ export default function FlightsPage() {
             <div className={styles.flightList_Sort}>
               <button
                 className={styles.flightList_SortButton}
-                onClick={() => setSortBy("price")}
+                onClick={() => {
+                  setSortBy("price");
+                }}
               >
                 Ekonomi Ücreti
               </button>
               <button
                 className={styles.flightList_SortButton}
-                onClick={() => setSortBy("departure")}
+                onClick={() => {
+                  setSortBy("departure");
+                }}
               >
                 Kalkış Saati
               </button>

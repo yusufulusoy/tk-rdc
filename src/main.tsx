@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Loading from "./components/ui/Loading/Loading";
 
 const HomePage = React.lazy(() => import("./pages/Home/Home"));
 const FlightsPage = React.lazy(() => import("./pages/Flights/Flights"));
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     index: true,
     path: "/",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <HomePage />
       </Suspense>
     ),
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/flights",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <FlightsPage />
       </Suspense>
     ),
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
   {
     path: "/cabin-selection",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <ResultPage />
       </Suspense>
     ),
