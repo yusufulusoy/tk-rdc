@@ -6,9 +6,10 @@ import {
 import { useState } from "react";
 import * as yup from "yup";
 import { CabinAndPassengerSelect, Combobox, Datepicker, Modal } from "..";
-import styles from "./FlightQueryForm.module.scss";
 import { useLocalStorage } from "@/hooks";
 import { useNavigate } from "react-router-dom";
+import { CABIN_CLASS } from "@/constants";
+import styles from "./FlightQueryForm.module.scss";
 
 interface FlightQueryFormProps {
   origin: Destination | null;
@@ -20,7 +21,7 @@ export default function FlightQueryForm() {
   const [form, setForm] = useState<FlightQueryFormProps>({
     origin: null,
     destination: null,
-    options: { cabin: "economy", passengers: 1 },
+    options: { cabin: CABIN_CLASS.ECONOMY, passengers: 1 },
   });
   const [showError, setShowError] = useState<boolean>(false);
   const [searchHistory, setSearchHistory] = useLocalStorage(

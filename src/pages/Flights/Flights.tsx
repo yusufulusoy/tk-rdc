@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { Layout } from "@/components/layouts";
+import { AvailableFlights, Switch } from "@/components/ui";
 import { useFlightListQuery, useSort } from "@/hooks";
 import styles from "./Flights.module.scss";
-import { AvailableFlights, Switch } from "@/components/ui";
-import { useEffect, useState } from "react";
 
 export default function FlightsPage() {
   const [hasPromotionCode, setHasPromotionCode] = useState<boolean>(false);

@@ -3,22 +3,31 @@ import { Layout } from "@/components/layouts";
 import { useLocalStorage } from "@/hooks";
 import styles from "./Result.module.scss";
 import { STATUS } from "@/constants";
+import { useNavigate } from "react-router-dom";
 
 export default function ResultPage() {
-  const [result, setResult] = useLocalStorage<string>("selectedCategory", "{}");
+  const [result] = useLocalStorage<string>("selectedCategory", "{}");
   const selectedResult = JSON.parse(result);
   const hasFailed = selectedResult.status === STATUS.ERROR;
+  const navigate = useNavigate();
 
   return (
     <Layout>
       <div className={styles.container}>
         {hasFailed ? (
-          <div className={styles.status}>
-            <div className={styles.errorIcon}>
-              <IconX />
+          <>
+            <div className={styles.status}>
+              <div className={styles.errorIcon}>
+                <IconX />
+              </div>
+              Kabin seçiminiz tamamlanamadı.
             </div>
-            Kabin seçiminiz tamamlanamadı.
-          </div>
+            <div className={styles.content}>
+              <button className={styles.button} onClick={() => navigate("/")}>
+                Başa Dön
+              </button>
+            </div>
+          </>
         ) : (
           <>
             <div className={styles.status}>
